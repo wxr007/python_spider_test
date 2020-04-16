@@ -3,7 +3,7 @@ import time
 
 # 获取一个浏览器对象
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--user-data-dir=C:\\Users\\zhangchen\\AppData\\Local\\Google\\Chrome\\User') #设置成用户自己的数据目录
+#chrome_options.add_argument('--user-data-dir=C:\\Users\\zhangchen\\AppData\\Local\\Google\\Chrome\\User') #设置成用户自己的数据目录
 br = webdriver.Chrome(chrome_options=chrome_options)
 
 # 打开一个页面
@@ -11,7 +11,7 @@ br.get('http://www.baidu.com')
 
 # 获取页面的源代码（运行后在内存中渲染的页面元素）
 #print(br.page_source)
-
+time.sleep(1)
 # 根据id查找元素
 kw = br.find_element_by_id('kw')
 # 往表单输入框中输入内容
@@ -19,7 +19,7 @@ kw.send_keys('python')
 # 点击某个元素
 br.find_element_by_id('su').click()
 
-time.sleep(3)
+time.sleep(1)
 
 # 设置窗口最大化
 br.maximize_window()
