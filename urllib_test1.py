@@ -10,6 +10,4 @@ response = urllib.request.urlopen("https://www.jdlingyu.mobi/tag/%E5%96%B5%E7%B3
 html = response.read()
 
 f = open("new.html","wb")
-# 打印字符串（页面源码）
-#print(html)
 f.write(html)
