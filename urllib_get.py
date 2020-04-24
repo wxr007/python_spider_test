@@ -20,5 +20,5 @@ request = urllib.request.Request(newurl, headers=headers)
 response = urllib.request.urlopen(request)
 html = response.read()
 
-f = open("new.html","wb")
+f = open("baidu.html","wb")
 f.write(html)

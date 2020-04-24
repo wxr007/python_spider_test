@@ -6,12 +6,13 @@ chrome_options = webdriver.ChromeOptions()
 #chrome_options.add_argument('--user-data-dir=C:\\Users\\zhangchen\\AppData\\Local\\Google\\Chrome\\User') #设置成用户自己的数据目录
 br = webdriver.Chrome(chrome_options=chrome_options)
 
+br.implicitly_wait(30)  # 隐性等待，最长等30秒 等待网页加载完成
 # 打开一个页面
 br.get('http://www.baidu.com')
 
 # 获取页面的源代码（运行后在内存中渲染的页面元素）
 #print(br.page_source)
-time.sleep(1)
+
 # 根据id查找元素
 kw = br.find_element_by_id('kw')
 # 往表单输入框中输入内容
@@ -44,5 +45,5 @@ time.sleep(2)
 # 关闭窗口
 br.close()
 # 退出浏览器
-time.sleep(2)
+time.sleep(1)
 br.quit()
